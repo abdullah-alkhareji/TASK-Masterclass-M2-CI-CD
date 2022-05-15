@@ -16,7 +16,7 @@ jobs:
           python-version: "3.9"
           cache: "pip"
 
-      - nme: install req
+      - name: install req
         run: pipenv install -r requirements.txt
 
       - nme: pip shell
