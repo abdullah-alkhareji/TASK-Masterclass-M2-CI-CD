@@ -17,10 +17,7 @@ jobs:
           cache: "pip"
 
       - name: install req
-        run: pipenv install -r requirements.txt
-
-      - name: pip shell
-        run: pipenv shell
+        run: pip install -r requirements.txt
 
       - name: test the app
         run: pytest .
