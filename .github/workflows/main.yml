@@ -1,0 +1,15 @@
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: python
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.9" # Version range or exact version of a Python version to use, using SemVer's version range syntax
+
+      - name: start the app
+        run: pytest .
