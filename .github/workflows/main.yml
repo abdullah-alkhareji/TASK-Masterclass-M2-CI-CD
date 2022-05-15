@@ -19,7 +19,7 @@ jobs:
       - name: install req
         run: pipenv install -r requirements.txt
 
-      - nme: pip shell
+      - name: pip shell
         run: pipenv shell
 
       - name: test the app
