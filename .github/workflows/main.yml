@@ -3,7 +3,7 @@ name: kkk
 on: [push]
 
 jobs:
-  test:
+  tests:
     runs-on: ubuntu-latest
 
     steps:
