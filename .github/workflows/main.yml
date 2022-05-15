@@ -13,7 +13,10 @@ jobs:
           cache: "pip"
 
       - nme: install req
-        run: pip install -r requirements.txt
+        run: pipenv install -r requirements.txt
+
+      - nme: pip shell
+        run: pipenv shell
 
       - name: test the app
         run: pytest .
