@@ -9,7 +9,11 @@ jobs:
       - name: python
         uses: actions/setup-python@v3
         with:
-          python-version: "3.9" # Version range or exact version of a Python version to use, using SemVer's version range syntax
+          python-version: "3.9"
+          cache: "pip"
 
-      - name: start the app
+      - nme: install req
+        run: pip install -r requirements.txt
+
+      - name: test the app
         run: pytest .
